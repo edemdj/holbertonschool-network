@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Affichage des ports UDP en écoute avec PID/Programme
+# Display of listening UDP ports with PID/Program
 echo "Active Internet connections (only servers)"
 echo "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name"
 netstat -tulpen
