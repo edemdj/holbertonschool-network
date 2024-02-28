@@ -5,14 +5,18 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
+# Vérifie si l'adresse IP est valide
 if [[ ! $1 =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
     echo "Adresse IP invalide."
     exit 1
 fi
 
+# Adresse IP à ping
 ip_address="$1"
 
+# Nombre de fois à ping l'adresse IP
 ping_count=5
 
+# Ping de l'adresse IP
 echo "Ping de l'adresse IP : $ip_address"
 ping -c $ping_count $ip_address
