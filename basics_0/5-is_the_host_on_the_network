@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
-# Vérifie si un argument est passé en ligne de commande
+# Checks if an argument is passed on the command line
 if [ $# -eq 0 ]; then
     echo "Utilisation : $0 {IP_ADDRESS}"
     exit 1
 fi
-# Vérifie si l'adresse IP est valide
+# Checks if IP address is valid
 if [[ ! $1 =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
     echo "Adresse IP invalide."
     exit 1
 fi
-# Adresse IP à ping
+# IP address to ping
 ip_address="$1"
 
-# Nombre de fois à ping l'adresse IP
+# Number of times to ping IP address
 ping_count=5
 
-# Ping de l'adresse IP
+# Ping IP address
 echo "Ping de l'adresse IP : $ip_address"
 ping -c $ping_count $ip_address
