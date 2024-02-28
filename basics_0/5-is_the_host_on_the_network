@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# Check if an argument is provided
+# command for pings an IP address passed as an argument
+
+# checks if the number of arguments is not 0
 if [ $# -eq 0 ]; then
-    echo "Usage: $0 {IP_ADDRESS}"
-    exit 1
+#if arg = 0 : msg error :
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+else
+# -c stops after sending the specified number of packets: 5.
+    ping -c 5 "$1"
+#end of code block
 fi
-
-# Store the IP address provided as an argument
-ip_address=$1
-
-# Ping the IP address 5 times
-ping -c 5 $ip_address
