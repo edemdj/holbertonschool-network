@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # command for pings an IP address passed as an argument
 
-# checks if the number of arguments is not 0
+# checks if the number of argument is not 0
 if [ $# -eq 0 ]; then
 #if arg = 0 : msg error :
     echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
