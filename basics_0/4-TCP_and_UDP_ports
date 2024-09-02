@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#command for displays listening ports
+netstat -tulpen
