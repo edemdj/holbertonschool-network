@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# command for pings an IP address passed as an argument
+
+# checks if the number of arguments is not 0
+if [ $# -eq 0 ]; then
+#if arg = 0 : msg error :
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+else
+# -c stops after sending the specified number of packets: 5.
+    ping -c 5 "$1"
+#end of code block
+fi
